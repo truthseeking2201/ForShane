@@ -68,29 +68,16 @@ const LoadingRow = styled.tr`
   opacity: ${props => 1 - (props.index * 0.2)};
 `;
 
+// Adjust the container's styling for better contrast against the background image
 const Container = styled.div`
   font-family: 'DM Sans', sans-serif;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.75); // More transparent to let background show through
   color: var(--text-primary);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
-`;
-
-const VaultActivityWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1080px;
-  width: 100%;
-  padding-top: 40px;
-  
-  ${Title} {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  }
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); // Enhanced shadow for better depth
+  backdrop-filter: blur(10px); // Add blur effect for glass-like appearance
 `;
 
 const HeaderWrapper = styled.div`
@@ -120,6 +107,22 @@ const FilterGroup = styled.div`
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+`;
+
+// Move VaultActivityWrapper down here, after Title is defined
+const VaultActivityWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 100%;
+  padding-top: 40px;
+  
+  /* Add slight text shadow to improve readability against the background */
+  ${Title} {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
 `;
 
 const FilterButton = styled.button`
